@@ -1,0 +1,8 @@
+application.hbs
+
+{{simple-table-1}}
+
+<h2>Transactions</h2>
+{{#each model as |transaction|}}
+  {{#link-to 'transactions' transaction.id}}{{transaction.vendor}}{{/link-to}}<br>
+{{/each}}

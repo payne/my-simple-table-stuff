@@ -1,0 +1,14 @@
+<table border=2>
+  <tbody>
+    {{#each rows as |row|}}
+    <tr>
+      <td>{{row.vendor}}</td><td>{{row.amount}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<hr>
+
+{{textarea value=csvText}}
+<button {{action 'processCsv' csvText}}>Process</button>
